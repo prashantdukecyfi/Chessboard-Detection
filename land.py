@@ -11,7 +11,7 @@ while (True):
 	ret,img = cap.read()	
 	gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-	land = land_cascade.detectMultiScale(gray, 10, 10) #If abrupt detections are made change (gray, 10, 10) to (gray, 20, 20) if more and more wrong detections are made, (gray, 1, 1) if none detections are made
+	land = land_cascade.detectMultiScale(gray, 10, 10) #If abrupt detections are made change (gray, 10, 10) to (gray, 20, 20) if more and more wrong detections are made, (gray, 1, 1) if none detections are made and you may change it as per your wish
 
 	for (x,y,w,h) in land:
 	    cv2.rectangle(img,(x,y),(x+w,y+h),(0,0,255),5)
